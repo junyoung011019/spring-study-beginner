@@ -4,14 +4,18 @@ import junyoung011019.spring_study.domain.Member;
 import junyoung011019.spring_study.repository.MemberRepository;
 import junyoung011019.spring_study.repository.MemoryMemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@RequiredArgsConstructor
 public class MemberService {
 
     private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     //회원가입
     public Long join(Member member){

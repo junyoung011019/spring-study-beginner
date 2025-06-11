@@ -62,3 +62,31 @@ assertThrows(IllegalStateException.class, ()-> memberService.join(member2));
 MemberService와 Test 간 레포지토리 통일 (의존성 주입)
 
 </details>
+
+<details>
+<summary> 2025년 06월 11일 </summary>
+
+### 파트 : 15
+@Service, @Controller, @Repository 등 각 클래스 상단에 작성해서 스프링 컨테이너에 등록 (싱글톤으로 등록- [유일하게 하나로] )
+-> 모두 @Componet를 활용해서, 메인에서 컴포넌트 스캔이 발생함
+
+@Autowired + 생성자 작성을 통해 의존성 주입
+-> @RequiredArgsConstructor를 통해 두가지 작업 병합
+
+### 파트 : 16
+빈으로 직접 등록하기
+@Configuration으로 등록된 SpringConfig에
+각 클래스, 인터페이스(서비스, 레포지토리 등)를 @Bean으로 설정
+
+사용 이유 : 정형화 되지 않거나, 추후에 구현 클래스를 수정해야하는 경우
+설정 파일 일부만 수정하면 됨(생성자 주입 변경 메모리 레포지토리 -> 실제 레포지토리)
+ex) 현재 메모리에 저장 -> 추후 DB 연동
+
+의존 주입(필드 - 직접 필드에 @Autowired - 변경 불가로 비추/세터- setter로 주입 - public으로 노출됨/생성자 - 실행 이후 동적으로 변경될 일이 없음 추천)
+
+</details>
+
+<details>
+<summary> 2025년 월 일 </summary>
+
+</details>

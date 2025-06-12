@@ -18,11 +18,22 @@ repositories {
 }
 
 dependencies {
+	//spring-boot
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.boot:spring-boot-starter'
+
+	//lombok
 	implementation 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	//DB (jdbc - 학습용)
+	runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+	//Tester
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

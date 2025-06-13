@@ -128,7 +128,47 @@ JDBC -> 직접 DB 연결(끊기) 작성 및 쿼리 작성 해야함
 
 </details>
 
+### 2025년 6월 13일 (파트 22, 파트 24) 
+// 기말고사 이슈로 많이 진행하지 못했음
 
+#### 📌 핵심 요약
+- JDBC -> JPA
+- Spring 통합 테스트
+- JPA 중점으로 하기 위해 파트 24(JPA)를 선 수강 후, 파트 22(스프링 통합 테스트 수강)
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+### 파트 : 24
+
+엔티티 설정
+1. strategy = GenerationType. ~
+- AUTO : 자동
+- IDENTITY : Auto Incremnet 기능 (MySQL)
+- SEQUENCE : 별도의 시퀀스 객체 만들어서 활용 (Oracle)
+- UUID : 고유 값
+
+2. Column(name= "속성명")
+
+레포지토리
+EntityManager로 매핑
+em.persist -> 영구저장
+
+서비스
+클래스에 @Transactional 작성
+
+JPQL - 객체 지향 클래스 SQL
+
+#### 파트 : 22
+
+작성해둔 테스트 코드 실행
+@SpringBootTest
+@Transactional(트랜잭션 커밋 X)
+
+단위 테스트 -> 각 기능별 테스트 (각 기능 구현에 대한 테스트)
+통합 테스트 -> DB 연동까지 (설계에 대한 테스트)
+
+</details>
 
 <br><br><br><br>
 

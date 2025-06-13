@@ -139,7 +139,7 @@ JDBC -> 직접 DB 연결(끊기) 작성 및 쿼리 작성 해야함
 <details>
 <summary> 학습 필기 내용 </summary>
 
-### 파트 : 24
+#### 파트 : 24
 
 엔티티 설정
 1. strategy = GenerationType. ~

@@ -170,6 +170,37 @@ JPQL - 객체 지향 클래스 SQL
 
 </details>
 
+### 2025년 6월 14일 (파트 23, 파트 25)
+
+#### 📌 핵심 요약
+
+- JDBC : 직접 쿼리 작성, DB 연결 설정 
+- JDBC Template : 직접 쿼리 작성 
+- JPA : 위 기능 간단하게 제공(구현 클래스만 작성)
+- Spring JPA : 인터페이스만 작성하면됨
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 : 23
+
+jdbc의 반복 코드 제거 -> jdbc 템플릿
+똑같이 SpringConfig에서 (Memory, Jdbc, Jdbc Template, JPA) 갈아끼우면됨
+rowMapper에서 검색한 데이터 가져옴 -> 객체 생성해서 세터로 값 설정 -> 리스트 / 객체 리턴
+최대한 테스트 케이스 많이 작성하기
+
+#### 파트 : 25
+
+Spring JPA 인터페이스를 통한 기본적인 CRUD 제공
+하지만 JPA는 알아야함(Spring JPA로 해결 안되면, JPA나 JDBC Template 혼합 사용)
+동적 쿼리 (상황따라 유동적) Querydsl
+
+⭐ 기초로 넘어가기전에 JDBC Template, JPA, Spring JPA 한번 더 공부해보기
+
+</details>
+
+
+
 <br><br><br><br>
 
 ### 2025년 월 일 (파트  ~ 파트 )

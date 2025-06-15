@@ -1,6 +1,7 @@
 package junyoung011019.spring_study;
 
 import jakarta.persistence.EntityManager;
+import junyoung011019.spring_study.aop.TimeTraceAop;
 import junyoung011019.spring_study.repository.JpaMemberRepository;
 import junyoung011019.spring_study.repository.MemberRepository;
 import junyoung011019.spring_study.repository.MemoryMemberRepository;
@@ -12,10 +13,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringConfig {
 
-    private final MemberRepository memberRepository;
+    private final JpaMemberRepository memberRepository;
 
     @Autowired
-    public SpringConfig(MemberRepository memberRepository) {
+    public SpringConfig(JpaMemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
@@ -24,6 +25,4 @@ public class SpringConfig {
         return new MemberService(memberRepository);
     }
 
-//    @Bean
-//    public MemberRepository memberRepository(){};
 }

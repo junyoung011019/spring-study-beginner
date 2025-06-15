@@ -2,10 +2,12 @@ package junyoung011019.spring_study.repository;
 
 import jakarta.persistence.EntityManager;
 import junyoung011019.spring_study.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class JpaMemberRepository implements MemberRepository{
 
     private final EntityManager em;
